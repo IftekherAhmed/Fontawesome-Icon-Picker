@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="dist/icon-picker.css">
+
+  <title>Icon Picker</title>
+</head>
+
+<body>
+
+  <!-- Icon Input with Previewer -->
+  <div class="m-4">
+    <input type="hidden" class="icon-class-input" value="fa fa-music" />
+    <p class="icon-preview">
+      <span class="demo-icon"></span>
+      <span class="demo-icon-text"></span>
+    </p>    
+    <button type="button" class="btn btn-primary picker-button">Pick</button>
+  </div>
+  <!--/ Icon Input with Previewer -->
+
+  <!-- Modal -->
+  <div id="iconPickerModal" class="modal fade">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <!-- Icon list -->
+          <ul class="icon-picker-list">
+            <li>
+              <a data-class="{{item}} {{activeState}}" data-index="{{index}}">
+                <span class="{{item}}"></span>
+                <span class="name-class">{{item}}</span>
+              </a>
+            </li>
+          </ul>
+          <!--/ Icon list -->
+        </div>
+        <!--/ Modal Body -->
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" id="change-icon" class="btn btn-success">
+            <span class="fa fa-check-circle-o"></span>
+            Use Selected Icon
+          </button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+        <!--/ Modal Footer -->
+      </div>
+      <!--/ Modal Content -->
+    </div>
+  </div>
+  <!--/ Modal -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+  <script src="dist/icon-picker.js"></script>
+</body>
+
+</html>
